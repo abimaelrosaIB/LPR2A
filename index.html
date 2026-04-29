@@ -107,6 +107,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 80px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -239,6 +240,21 @@
       left: 30%;
       animation-delay: -4s;
     }
+
+    /* Blobs for depth */
+    .section-blob {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.05;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .section-blob--left { left: -10%; top: 20%; background: var(--accent-cyan); }
+    .section-blob--right { right: -10%; bottom: 20%; background: var(--accent-purple); }
 
     @keyframes orbFloat {
       0% {
@@ -381,11 +397,12 @@
     }
 
     .hero__headline {
-      font-size: clamp(2.25rem, 7vw, 3.75rem);
+      font-size: clamp(2.5rem, 8vw, 4.25rem);
       font-weight: 900;
-      letter-spacing: -0.04em;
-      line-height: 1.08;
+      letter-spacing: -0.05em;
+      line-height: 1.02;
       margin-bottom: var(--s-lg);
+      text-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
     }
 
     .hero__headline-accent {
@@ -1382,8 +1399,9 @@
     .plan-card:hover {
       background: var(--bg-card-hover);
       border-color: var(--border-accent);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-glow);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+      z-index: 2;
     }
 
     /* Featured plan */
@@ -2059,7 +2077,7 @@
         <span class="gradient-text">R2A</span>
       </a>
       <a href="#contato" class="nav__cta" id="nav-cta">
-        Falar com especialista
+        Consultoria Gratuita
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
           stroke-linejoin="round">
           <polyline points="9 18 15 12 9 6" />
@@ -2090,7 +2108,7 @@
 
       <div class="hero__actions reveal reveal-delay-3">
         <a href="#contato" class="btn-primary" id="hero-cta">
-          Quero crescer meu negócio
+          Destravar meu crescimento agora
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
             stroke-linejoin="round">
             <polyline points="9 18 15 12 9 6" />
@@ -2148,6 +2166,7 @@
        2. POSICIONAMENTO
        ======================================== -->
   <section class="section positioning" id="sobre">
+    <div class="section-blob section-blob--left"></div>
     <div class="container">
       <span class="section-label reveal">Quem somos</span>
       <h2 class="section-title reveal">
@@ -2216,6 +2235,7 @@
        SERVIÇOS
        ======================================== -->
   <section class="section services" id="servicos">
+    <div class="section-blob section-blob--right"></div>
     <div class="container">
 
       <!-- Services Intro -->
