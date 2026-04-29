@@ -1,0 +1,3357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="R2A — Ready to Action. Pare de postar sem estratégia. Comece a crescer com direção, clareza e resultado real.">
+  <meta name="theme-color" content="#0A0A0C">
+  <title>R2A — Ready to Action | Estratégia que gera resultado</title>
+
+  <!-- ========================================
+       SEO & COMPARTILHAMENTO (OPEN GRAPH)
+       ======================================== -->
+  <meta property="og:title" content="R2A — Ready to Action | Estratégia que gera resultado">
+  <meta property="og:description"
+    content="Pare de postar sem estratégia. A R2A transforma a presença digital do seu negócio com estratégia, execução e resultado real.">
+  <meta property="og:type" content="website">
+  <!-- ⚠️ Substitua esta URL pela imagem de capa oficial do site depois -->
+  <meta property="og:image" content="https://sua-url.com.br/capa-whatsapp.jpg">
+  <meta property="og:url" content="https://sua-url.com.br">
+
+  <!-- Favicon Provisório (Foguete) -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* =============================================
+       RESET & CUSTOM PROPERTIES
+       ============================================= */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* ── Backgrounds ── */
+      --bg-primary: #0A0A0C;
+      --bg-secondary: #111114;
+      --bg-card: rgba(26, 26, 29, 0.55);
+      --bg-card-solid: #1A1A1D;
+      --bg-card-hover: rgba(35, 35, 40, 0.65);
+      --bg-surface: rgba(255, 255, 255, 0.02);
+
+      /* ── Accent Gradient ── */
+      --accent-cyan: #06D6A0;
+      --accent-blue: #118AB2;
+      --accent-purple: #7B2FF7;
+      --accent-magenta: #E040FB;
+      --gradient-main: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue), var(--accent-purple));
+      --gradient-reverse: linear-gradient(135deg, var(--accent-purple), var(--accent-blue), var(--accent-cyan));
+      --gradient-warm: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+
+      /* ── Text ── */
+      --text-primary: #F0F0F2;
+      --text-secondary: rgba(240, 240, 242, 0.65);
+      --text-muted: rgba(240, 240, 242, 0.38);
+
+      /* ── Borders ── */
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --border-accent: rgba(6, 214, 160, 0.2);
+
+      /* ── Spacing Scale ── */
+      --s-xs: 4px;
+      --s-sm: 8px;
+      --s-md: 16px;
+      --s-lg: 24px;
+      --s-xl: 32px;
+      --s-2xl: 48px;
+      --s-3xl: 64px;
+      --s-4xl: 96px;
+
+      /* ── Radius ── */
+      --r-sm: 8px;
+      --r-md: 12px;
+      --r-lg: 16px;
+      --r-xl: 20px;
+      --r-2xl: 24px;
+      --r-full: 9999px;
+
+      /* ── Shadows ── */
+      --shadow-glow: 0 0 50px rgba(6, 214, 160, 0.08);
+      --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.35);
+      --shadow-btn: 0 4px 24px rgba(6, 214, 160, 0.25);
+      --shadow-btn-hover: 0 8px 40px rgba(6, 214, 160, 0.35);
+
+      /* ── Transitions ── */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+      --t-fast: 0.2s var(--ease-smooth);
+      --t-smooth: 0.35s var(--ease-out);
+      --t-slow: 0.5s var(--ease-out);
+
+      /* ── Layout ── */
+      --max-w: 1140px;
+      --max-w-narrow: 720px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ::selection {
+      background: rgba(6, 214, 160, 0.25);
+      color: var(--text-primary);
+    }
+
+    /* =============================================
+       UTILITIES
+       ============================================= */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--s-lg);
+    }
+
+    .container--narrow {
+      max-width: var(--max-w-narrow);
+    }
+
+    .gradient-text {
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section {
+      padding: var(--s-4xl) 0;
+      position: relative;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-sm);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      margin-bottom: var(--s-lg);
+    }
+
+    .section-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--gradient-main);
+      border-radius: var(--r-full);
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: var(--s-md);
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 580px;
+    }
+
+    /* =============================================
+       BACKGROUND EFFECTS
+       ============================================= */
+    .bg-glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow__orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.04;
+      animation: orbFloat 16s ease-in-out infinite alternate;
+    }
+
+    .bg-glow__orb--1 {
+      width: 600px;
+      height: 600px;
+      background: var(--accent-cyan);
+      top: -10%;
+      left: -10%;
+    }
+
+    .bg-glow__orb--2 {
+      width: 500px;
+      height: 500px;
+      background: var(--accent-purple);
+      top: 40%;
+      right: -15%;
+      animation-delay: -8s;
+      animation-direction: alternate-reverse;
+    }
+
+    .bg-glow__orb--3 {
+      width: 400px;
+      height: 400px;
+      background: var(--accent-blue);
+      bottom: -5%;
+      left: 30%;
+      animation-delay: -4s;
+    }
+
+    @keyframes orbFloat {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(30px, -20px) scale(1.1);
+      }
+
+      100% {
+        transform: translate(-20px, 30px) scale(0.95);
+      }
+    }
+
+    /* Noise overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* =============================================
+       NAVIGATION
+       ============================================= */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: var(--s-md) 0;
+      transition: all var(--t-smooth);
+      backdrop-filter: blur(0px);
+    }
+
+    .nav--scrolled {
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__brand {
+      font-size: 1.375rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .nav__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-sm);
+      padding: 10px 20px;
+      background: var(--gradient-main);
+      border: none;
+      border-radius: var(--r-full);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--t-smooth);
+      text-decoration: none;
+    }
+
+    .nav__cta:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-btn);
+    }
+
+    .nav__cta svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* =============================================
+       1. HERO
+       ============================================= */
+    .hero {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: calc(80px + var(--s-2xl)) 0 var(--s-3xl);
+      overflow: hidden;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-sm);
+      padding: 8px 16px;
+      background: rgba(6, 214, 160, 0.06);
+      border: 1px solid rgba(6, 214, 160, 0.12);
+      border-radius: var(--r-full);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin-bottom: var(--s-xl);
+      letter-spacing: 0.04em;
+    }
+
+    .hero__badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.3;
+        transform: scale(0.7);
+      }
+    }
+
+    .hero__headline {
+      font-size: clamp(2.25rem, 7vw, 3.75rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+      margin-bottom: var(--s-lg);
+    }
+
+    .hero__headline-accent {
+      display: block;
+      background: var(--gradient-main);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero__subheadline {
+      font-size: clamp(1rem, 2.5vw, 1.1875rem);
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: var(--s-xl);
+      max-width: 520px;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-md);
+      align-items: center;
+    }
+
+    /* Primary Button (shared) */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-sm);
+      padding: 16px 32px;
+      background: var(--gradient-main);
+      border: none;
+      border-radius: var(--r-full);
+      color: #fff;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--t-smooth);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity var(--t-fast);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: var(--shadow-btn-hover);
+    }
+
+    .btn-primary:hover::before {
+      opacity: 1;
+    }
+
+    .btn-primary:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .btn-primary svg {
+      width: 18px;
+      height: 18px;
+      transition: transform var(--t-fast);
+    }
+
+    .btn-primary:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* Secondary Button (shared) */
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-sm);
+      padding: 16px 28px;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-full);
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--t-smooth);
+      text-decoration: none;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--border-accent);
+      color: var(--text-primary);
+      background: rgba(6, 214, 160, 0.04);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Hero visual decoration */
+    .hero__visual {
+      position: absolute;
+      right: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 45%;
+      max-width: 500px;
+      aspect-ratio: 1;
+      z-index: 1;
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .hero__visual {
+        display: block;
+      }
+    }
+
+    .hero__visual-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid var(--border-subtle);
+      animation: heroRingSpin 30s linear infinite;
+    }
+
+    .hero__visual-ring--1 {
+      inset: 0;
+    }
+
+    .hero__visual-ring--2 {
+      inset: 15%;
+      border-color: rgba(6, 214, 160, 0.08);
+      animation-direction: reverse;
+      animation-duration: 25s;
+    }
+
+    .hero__visual-ring--3 {
+      inset: 30%;
+      border-color: rgba(123, 47, 247, 0.08);
+      animation-duration: 20s;
+    }
+
+    .hero__visual-center {
+      position: absolute;
+      inset: 38%;
+      border-radius: 50%;
+      background: var(--gradient-main);
+      opacity: 0.12;
+      filter: blur(30px);
+      animation: heroCenterPulse 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroRingSpin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes heroCenterPulse {
+      0% {
+        opacity: 0.08;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 0.18;
+        transform: scale(1.1);
+      }
+    }
+
+    /* ── Rocket Animation ── */
+    .hero__visual-rocket {
+      position: absolute;
+      inset: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .rocket-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rocket-svg {
+      width: 50px;
+      height: auto;
+      filter: drop-shadow(0 0 15px rgba(6, 214, 160, 0.4));
+      animation: rocketLaunch 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+      z-index: 5;
+    }
+
+    .rocket-fire {
+      animation: thrusterPulse 0.15s ease-in-out infinite alternate;
+      transform-origin: top;
+    }
+
+    @keyframes rocketLaunch {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+      }
+      5% {
+        opacity: 1;
+      }
+      15% {
+        transform: translateY(5px) scale(1);
+      }
+      30% {
+        transform: translateY(-150%) scale(0.8);
+        opacity: 0;
+      }
+      70% {
+        transform: translateY(100%) scale(0.5);
+        opacity: 0;
+      }
+      85% {
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes thrusterPulse {
+      from { transform: scaleY(0.8) translateX(-1px); opacity: 0.7; }
+      to { transform: scaleY(1.3) translateX(1px); opacity: 1; }
+    }
+
+    /* Floating nodes on rings */
+    .hero__visual-ring--1::before,
+    .hero__visual-ring--2::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      top: 5%;
+      left: 50%;
+      box-shadow: 0 0 15px var(--accent-cyan), 0 0 30px rgba(6, 214, 160, 0.4);
+    }
+
+    .hero__visual-ring--2::after {
+      background: var(--accent-purple);
+      top: auto;
+      bottom: 10%;
+      left: 80%;
+      box-shadow: 0 0 15px var(--accent-purple), 0 0 30px rgba(123, 47, 247, 0.4);
+    }
+
+    /* Scroll indicator */
+    .hero__scroll {
+      position: absolute;
+      bottom: var(--s-xl);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--s-sm);
+      color: var(--text-muted);
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .hero__scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--accent-cyan), transparent);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollLine {
+      0% {
+        transform: scaleY(0);
+        transform-origin: top;
+      }
+
+      50% {
+        transform: scaleY(1);
+        transform-origin: top;
+      }
+
+      51% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+      }
+
+      100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+      }
+    }
+
+    /* =============================================
+       2. POSICIONAMENTO
+       ============================================= */
+    .positioning {
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .positioning__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s-md);
+      margin-top: var(--s-xl);
+    }
+
+    @media (min-width: 640px) {
+      .positioning__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .positioning__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .pos-card {
+      padding: var(--s-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all var(--t-smooth);
+    }
+
+    .pos-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .pos-card__icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--r-md);
+      background: rgba(6, 214, 160, 0.06);
+      margin-bottom: var(--s-md);
+    }
+
+    .pos-card__icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--accent-cyan);
+    }
+
+    .pos-card__title {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin-bottom: var(--s-sm);
+      letter-spacing: -0.01em;
+    }
+
+    .pos-card__text {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* =============================================
+       3. PROVA REAL — PORTFÓLIO
+       ============================================= */
+    .portfolio {
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .portfolio__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s-lg);
+      margin-top: var(--s-xl);
+    }
+
+    @media (min-width: 640px) {
+      .portfolio__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .portfolio__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      transition: all var(--t-smooth);
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .project-card__image {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background: var(--bg-secondary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card__image-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, rgba(6, 214, 160, 0.03), rgba(123, 47, 247, 0.03));
+    }
+
+    .project-card__image-placeholder svg {
+      width: 32px;
+      height: 32px;
+      opacity: 0.2;
+    }
+
+    .project-card__body {
+      padding: var(--s-lg);
+    }
+
+    .project-card__tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: rgba(6, 214, 160, 0.08);
+      border-radius: var(--r-full);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: var(--s-sm);
+    }
+
+    .project-card__name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: var(--s-sm);
+      letter-spacing: -0.01em;
+    }
+
+    .project-card__desc {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: var(--s-md);
+    }
+
+    .project-card__result {
+      display: flex;
+      align-items: center;
+      gap: var(--s-sm);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+    }
+
+    .project-card__result svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* =============================================
+       4. VÍDEOS / PROVA SOCIAL
+       ============================================= */
+    .videos {
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .videos__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s-lg);
+      margin-top: var(--s-xl);
+    }
+
+    @media (min-width: 768px) {
+      .videos__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .video-card {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      transition: all var(--t-smooth);
+    }
+
+    .video-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .video-card__embed {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: var(--bg-secondary);
+    }
+
+    .video-card__embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Video embed (vertical format for Reels/Shorts) */
+    .video-card__embed--reel {
+      padding-bottom: 125%;
+    }
+
+    .video-card__embed video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: none;
+    }
+
+    @media (min-width: 768px) {
+      .videos__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .videos__grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .video-card__embed-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s-sm);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all var(--t-fast);
+    }
+
+    .video-card__embed-placeholder:hover {
+      color: var(--text-secondary);
+    }
+
+    .video-card__play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--gradient-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--t-smooth);
+      box-shadow: 0 4px 24px rgba(6, 214, 160, 0.2);
+    }
+
+    .video-card__embed-placeholder:hover .video-card__play-btn {
+      transform: scale(1.1);
+      box-shadow: 0 6px 32px rgba(6, 214, 160, 0.3);
+    }
+
+    .video-card__play-btn svg {
+      width: 22px;
+      height: 22px;
+      color: #fff;
+      margin-left: 2px;
+    }
+
+    .video-card__info {
+      padding: var(--s-md) var(--s-lg);
+    }
+
+    .video-card__title {
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+
+    .video-card__type {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* =============================================
+       5. DIFERENCIAL R2A
+       ============================================= */
+    .differentials {
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .diff__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s-md);
+      margin-top: var(--s-xl);
+    }
+
+    @media (min-width: 768px) {
+      .diff__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .diff-block {
+      display: flex;
+      gap: var(--s-md);
+      padding: var(--s-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all var(--t-smooth);
+    }
+
+    .diff-block:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+    }
+
+    .diff-block__icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--r-md);
+      background: var(--gradient-main);
+    }
+
+    .diff-block__icon svg {
+      width: 22px;
+      height: 22px;
+      color: #fff;
+    }
+
+    .diff-block__title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: var(--s-xs);
+      letter-spacing: -0.01em;
+    }
+
+    .diff-block__text {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       6. QUEBRA DE OBJEÇÃO
+       ============================================= */
+    .objection {
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+    }
+
+    .objection__list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-md);
+      margin-top: var(--s-xl);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .objection__item {
+      display: flex;
+      align-items: center;
+      gap: var(--s-md);
+      padding: var(--s-md) var(--s-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-align: left;
+      transition: all var(--t-smooth);
+    }
+
+    .objection__item:hover {
+      border-color: var(--border-accent);
+      color: var(--text-primary);
+      background: var(--bg-card-hover);
+    }
+
+    .objection__check {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(6, 214, 160, 0.1);
+    }
+
+    .objection__check svg {
+      width: 14px;
+      height: 14px;
+      color: var(--accent-cyan);
+    }
+
+
+    /* =============================================
+       8. SEÇÃO FINAL — CONVERSÃO
+       ============================================= */
+    .final-cta {
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+      padding-bottom: var(--s-3xl);
+    }
+
+    .final-cta__glow {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto var(--s-xl);
+      border-radius: 50%;
+      background: var(--gradient-main);
+      opacity: 0.06;
+      filter: blur(60px);
+      animation: heroCenterPulse 6s ease-in-out infinite alternate;
+    }
+
+    .final-cta__headline {
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: var(--s-md);
+    }
+
+    .final-cta__sub {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--s-xl);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .final-cta__actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--s-md);
+    }
+
+    @media (min-width: 480px) {
+      .final-cta__actions {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    /* WhatsApp Button */
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-sm);
+      padding: 16px 32px;
+      background: #25D366;
+      border: none;
+      border-radius: var(--r-full);
+      color: #fff;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--t-smooth);
+      text-decoration: none;
+    }
+
+    .btn-whatsapp:hover {
+      background: #20BD5A;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .btn-whatsapp svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* =============================================
+       9. FOOTER
+       ============================================= */
+    .footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: var(--s-2xl) 0;
+      text-align: center;
+    }
+
+    .footer__brand {
+      font-size: 1.125rem;
+      font-weight: 800;
+      margin-bottom: var(--s-xs);
+    }
+
+    .footer__tagline {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: var(--s-lg);
+      letter-spacing: 0.06em;
+    }
+
+    .footer__socials {
+      display: flex;
+      justify-content: center;
+      gap: var(--s-md);
+      margin-bottom: var(--s-lg);
+    }
+
+    .footer__social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--r-md);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      transition: all var(--t-smooth);
+    }
+
+    .footer__social-link:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--border-accent);
+      color: var(--accent-cyan);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 16px rgba(6, 214, 160, 0.12);
+    }
+
+    .footer__social-link svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer__copy {
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* =============================================
+       SERVIÇOS
+       ============================================= */
+    .services {
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .services__intro {
+      margin-bottom: var(--s-3xl);
+    }
+
+    /* ── Service Block ── */
+    .svc-block {
+      margin-bottom: var(--s-3xl);
+    }
+
+    .svc-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .svc-block__header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s-md);
+      margin-bottom: var(--s-lg);
+    }
+
+    .svc-block__icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--r-md);
+      background: var(--gradient-main);
+    }
+
+    .svc-block__icon svg {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+    }
+
+    .svc-block__name {
+      font-size: 1.375rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--s-xs);
+    }
+
+    .svc-block__desc {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    /* ── Plans Grid (Gestão de Redes) ── */
+    .plans-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s-md);
+    }
+
+    @media (min-width: 768px) {
+      .plans-grid {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: stretch;
+      }
+    }
+
+    .plan-card {
+      position: relative;
+      padding: var(--s-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all var(--t-smooth);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plan-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* Featured plan */
+    .plan-card--featured {
+      border-color: rgba(6, 214, 160, 0.25);
+      background: rgba(6, 214, 160, 0.03);
+    }
+
+    .plan-card--featured::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: var(--s-lg);
+      right: var(--s-lg);
+      height: 2px;
+      background: var(--gradient-main);
+      border-radius: 0 0 var(--r-full) var(--r-full);
+    }
+
+    .plan-card--featured:hover {
+      border-color: rgba(6, 214, 160, 0.4);
+      box-shadow: 0 0 60px rgba(6, 214, 160, 0.1);
+    }
+
+    .plan-card__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: var(--r-full);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: var(--s-md);
+      width: fit-content;
+    }
+
+    .plan-card__badge--starter {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+    }
+
+    .plan-card__badge--popular {
+      background: rgba(6, 214, 160, 0.1);
+      color: var(--accent-cyan);
+    }
+
+    .plan-card__badge--scale {
+      background: rgba(123, 47, 247, 0.1);
+      color: var(--accent-purple);
+    }
+
+    .plan-card__badge-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .plan-card__title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--s-xs);
+    }
+
+    .plan-card__subtitle {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: var(--s-lg);
+    }
+
+    .plan-card__features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-sm);
+      margin-bottom: var(--s-lg);
+      flex: 1;
+    }
+
+    .plan-card__feature {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s-sm);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .plan-card__feature-check {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .plan-card__feature-check svg {
+      width: 14px;
+      height: 14px;
+      color: var(--accent-cyan);
+    }
+
+    .plan-card--featured .plan-card__feature {
+      color: var(--text-primary);
+    }
+
+    /* Plan CTA */
+    .plan-card__cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s-sm);
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: var(--r-full);
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--t-smooth);
+      text-decoration: none;
+      border: none;
+      margin-top: auto;
+    }
+
+    .plan-card__cta--outline {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+    }
+
+    .plan-card__cta--outline:hover {
+      border-color: var(--border-accent);
+      color: var(--text-primary);
+      background: rgba(6, 214, 160, 0.04);
+      transform: translateY(-2px);
+    }
+
+    .plan-card__cta--filled {
+      background: var(--gradient-main);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plan-card__cta--filled::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity var(--t-fast);
+    }
+
+    .plan-card__cta--filled:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-btn);
+    }
+
+    .plan-card__cta--filled:hover::before {
+      opacity: 1;
+    }
+
+    .plan-card__cta svg {
+      width: 16px;
+      height: 16px;
+      transition: transform var(--t-fast);
+    }
+
+    .plan-card__cta:hover svg {
+      transform: translateX(2px);
+    }
+
+    /* ── Service Feature Card (Avulsas, Vídeos, LP) ── */
+    .svc-features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s-md);
+    }
+
+    @media (min-width: 640px) {
+      .svc-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .svc-features--4col {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .svc-feat {
+      padding: var(--s-lg);
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-lg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all var(--t-smooth);
+    }
+
+    .svc-feat:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+    }
+
+    .svc-feat__icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--r-sm);
+      background: rgba(6, 214, 160, 0.06);
+      margin-bottom: var(--s-md);
+    }
+
+    .svc-feat__icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-cyan);
+    }
+
+    .svc-feat__title {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      margin-bottom: var(--s-xs);
+      letter-spacing: -0.01em;
+    }
+
+    .svc-feat__text {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── Service CTA row ── */
+    .svc-block__cta-row {
+      margin-top: var(--s-lg);
+    }
+
+    /* ── Service highlight callout ── */
+    .svc-callout {
+      display: flex;
+      align-items: center;
+      gap: var(--s-md);
+      padding: var(--s-md) var(--s-lg);
+      background: rgba(6, 214, 160, 0.04);
+      border: 1px solid rgba(6, 214, 160, 0.1);
+      border-radius: var(--r-lg);
+      margin-top: var(--s-lg);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .svc-callout__icon {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .svc-callout__icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-cyan);
+    }
+
+    .svc-callout strong {
+      color: var(--text-primary);
+    }
+
+    /* ── Service divider ── */
+    .svc-divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gradient-main);
+      opacity: 0.15;
+      margin: var(--s-3xl) 0;
+      border-radius: var(--r-full);
+    }
+
+    /* =============================================
+       SCROLL REVEAL ANIMATION
+       ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s var(--ease-out);
+    }
+
+    .reveal--visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    /* =============================================
+       SCROLLBAR
+       ============================================= */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--r-full);
+    }
+
+    /* =============================================
+       FOCUS STATES
+       ============================================= */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent-cyan);
+      outline-offset: 3px;
+    }
+
+    /* =============================================
+       RIPPLE
+       ============================================= */
+    .ripple-effect {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.12);
+      transform: scale(0);
+      animation: ripple 0.6s ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* =============================================
+       PRE-BOOKING MODAL
+       ============================================= */
+    .pre-booking-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--s-md);
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--t-smooth);
+    }
+
+    .pre-booking-overlay.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .pre-booking-modal {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-xl);
+      width: 100%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      transform: translateY(20px) scale(0.98);
+      transition: all var(--t-smooth);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+    }
+
+    .pre-booking-overlay.is-open .pre-booking-modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .pre-booking-close {
+      position: sticky;
+      top: 0;
+      float: right;
+      margin: var(--s-md) var(--s-md) 0 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all var(--t-fast);
+    }
+
+    .pre-booking-close:hover {
+      background: var(--bg-card-hover);
+      color: var(--text-primary);
+    }
+
+    .pre-booking-close svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .pre-booking-header {
+      padding: var(--s-xl) var(--s-xl) 0;
+      text-align: center;
+    }
+
+    .pre-booking-header h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: var(--s-xs);
+      line-height: 1.3;
+    }
+
+    .pre-booking-header p {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+    }
+
+    .pre-booking-form {
+      padding: var(--s-xl);
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-xl);
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: var(--s-sm);
+      color: var(--text-primary);
+    }
+
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--r-md);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.9375rem;
+      transition: border-color var(--t-fast);
+    }
+
+    .form-group input[type="text"]:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      background: rgba(6, 214, 160, 0.02);
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    @media(min-width: 480px) {
+      .options-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .option-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 12px 14px;
+      border: 1px solid var(--border-subtle);
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: var(--r-md);
+      cursor: pointer;
+      transition: all var(--t-fast);
+      user-select: none;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      height: 100%;
+    }
+
+    .option-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .sr-only:checked+.option-card {
+      border-color: var(--accent-cyan);
+      background: rgba(6, 214, 160, 0.08);
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .form-footer {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: var(--s-lg);
+      text-align: center;
+    }
+
+    .security-note {
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+      margin-top: var(--s-sm);
+    }
+
+    /* Loading state */
+    .btn-loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    /* ========================================
+       PRELOADER & WHATSAPP FLOAT
+       ======================================== */
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: var(--bg-primary);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .preloader.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .preloader-logo {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -2px;
+      color: var(--text-primary);
+      animation: pulse-glow 1.5s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0% {
+        text-shadow: 0 0 10px rgba(6, 214, 160, 0.2);
+        transform: scale(0.98);
+      }
+
+      50% {
+        text-shadow: 0 0 30px rgba(6, 214, 160, 0.8);
+        transform: scale(1.02);
+      }
+
+      100% {
+        text-shadow: 0 0 10px rgba(6, 214, 160, 0.2);
+        transform: scale(0.98);
+      }
+    }
+
+    .float-wa {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0px 4px 20px rgba(37, 211, 102, 0.4);
+      z-index: 990;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .float-wa:hover {
+      transform: scale(1.1) translateY(-5px);
+      box-shadow: 0px 6px 25px rgba(37, 211, 102, 0.6);
+      color: #FFF;
+    }
+
+    .float-wa svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 768px) {
+      .float-wa {
+        bottom: 16px;
+        right: 16px;
+        width: 50px;
+        height: 50px;
+      }
+
+      .float-wa svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo">R2A</div>
+  </div>
+
+  <!-- Background Orbs -->
+  <div class="bg-glow" aria-hidden="true">
+    <div class="bg-glow__orb bg-glow__orb--1"></div>
+    <div class="bg-glow__orb bg-glow__orb--2"></div>
+    <div class="bg-glow__orb bg-glow__orb--3"></div>
+  </div>
+
+  <!-- ========================================
+       NAVIGATION
+       ======================================== -->
+  <nav class="nav" id="navbar">
+    <div class="container nav__inner">
+      <a href="#" class="nav__brand">
+        <span class="gradient-text">R2A</span>
+      </a>
+      <a href="#contato" class="nav__cta" id="nav-cta">
+        Falar com especialista
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+          stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       1. HERO
+       ======================================== -->
+  <section class="hero" id="hero">
+    <div class="container hero__content">
+      <div class="hero__badge reveal">
+        <span class="hero__badge-dot" aria-hidden="true"></span>
+        Ready to Action
+      </div>
+
+      <h1 class="hero__headline reveal reveal-delay-1">
+        Pare de postar<br>sem estratégia.
+        <span class="hero__headline-accent">Comece a crescer<br>com direção.</span>
+      </h1>
+
+      <p class="hero__subheadline reveal reveal-delay-2">
+        A R2A transforma a presença digital do seu negócio com estratégia,
+        execução e resultado. Sem enrolação — direto ao que funciona.
+      </p>
+
+      <div class="hero__actions reveal reveal-delay-3">
+        <a href="#contato" class="btn-primary" id="hero-cta">
+          Quero crescer meu negócio
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </a>
+        <a href="#portfolio" class="btn-secondary" id="hero-secondary">
+          Ver resultados
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7" />
+            <polyline points="7 7 17 7 17 17" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Visual (Desktop) -->
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__visual-ring hero__visual-ring--1"></div>
+      <div class="hero__visual-ring hero__visual-ring--2"></div>
+      <div class="hero__visual-ring hero__visual-ring--3"></div>
+      <div class="hero__visual-center"></div>
+      <div class="hero__visual-rocket">
+        <div class="rocket-container">
+          <svg class="rocket-svg" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+            <!-- Thruster Fire -->
+            <path class="rocket-fire" d="M22 65 Q30 95 38 65" fill="#FFD166" />
+            <path class="rocket-fire" d="M25 65 Q30 85 35 65" fill="#EF476F" />
+            
+            <!-- Rocket Wings -->
+            <path d="M15 50 L5 70 L20 70 Z" fill="var(--accent-purple)" />
+            <path d="M45 50 L55 70 L40 70 Z" fill="var(--accent-purple)" />
+            
+            <!-- Rocket Body -->
+            <path d="M30 5 C15 25 12 55 12 70 L48 70 C48 55 45 25 30 5 Z" fill="#fff" />
+            <path d="M30 5 C22 25 20 55 20 70 L40 70 C40 55 38 25 30 5 Z" fill="#f8f9fa" />
+            
+            <!-- Logo R2A -->
+            <text x="30" y="52" font-family="'Inter', sans-serif" font-size="8" font-weight="900" fill="var(--accent-cyan)" text-anchor="middle">R2A</text>
+            
+            <!-- Window -->
+            <circle cx="30" cy="35" r="5" fill="var(--bg-primary)" stroke="var(--accent-cyan)" stroke-width="1.5" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       2. POSICIONAMENTO
+       ======================================== -->
+  <section class="section positioning" id="sobre">
+    <div class="container">
+      <span class="section-label reveal">Quem somos</span>
+      <h2 class="section-title reveal">
+        Estratégia que sai do papel.<br>
+        <span class="gradient-text">Resultado que aparece.</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        A R2A é para quem cansou de tentativas soltas e quer um direcionamento
+        claro para crescer de verdade no digital.
+      </p>
+
+      <div class="positioning__grid">
+        <!-- Card 1 -->
+        <div class="pos-card reveal">
+          <div class="pos-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </div>
+          <h3 class="pos-card__title">O que fazemos</h3>
+          <p class="pos-card__text">
+            Marketing estratégico, criação de conteúdo, gestão de redes sociais e
+            branding — tudo com foco em resultado mensurável.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="pos-card reveal reveal-delay-1">
+          <div class="pos-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3 class="pos-card__title">Para quem fazemos</h3>
+          <p class="pos-card__text">
+            Empresários, profissionais liberais e marcas que querem parar de
+            improvisar e começar a ter presença digital com estratégia.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pos-card reveal reveal-delay-2">
+          <div class="pos-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <h3 class="pos-card__title">Que problema resolvemos</h3>
+          <p class="pos-card__text">
+            Falta de direcionamento, conteúdo sem estratégia, visual amador e
+            ausência de resultado — transformamos tudo isso em crescimento real.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SERVIÇOS
+       ======================================== -->
+  <section class="section services" id="servicos">
+    <div class="container">
+
+      <!-- Services Intro -->
+      <div class="services__intro">
+        <span class="section-label reveal">Nossos serviços</span>
+        <h2 class="section-title reveal">
+          Tudo o que seu negócio precisa<br>
+          <span class="gradient-text">para crescer no digital.</span>
+        </h2>
+        <p class="section-subtitle reveal">
+          Soluções sob medida, com estratégia e execução. Sem pacote genérico — cada entrega é pensada para gerar
+          resultado real.
+        </p>
+      </div>
+
+      <!-- ─────────────────────────────────────
+           1. GESTÃO DE REDES SOCIAIS
+           ───────────────────────────────────── -->
+      <div class="svc-block reveal">
+        <div class="svc-block__header">
+          <div class="svc-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="svc-block__name">Gestão de Redes Sociais</h3>
+            <p class="svc-block__desc">
+              Presença profissional no Instagram com conteúdo estratégico. Escolha o plano ideal para o momento do seu
+              negócio.
+            </p>
+          </div>
+        </div>
+
+        <div class="plans-grid">
+          <!-- Plano Inicial -->
+          <div class="plan-card reveal">
+            <span class="plan-card__badge plan-card__badge--starter">
+              <span class="plan-card__badge-dot" aria-hidden="true"></span>
+              Ideal para começar
+            </span>
+            <h4 class="plan-card__title">Inicial</h4>
+            <p class="plan-card__subtitle">Para quem quer dar o primeiro passo com consistência.</p>
+            <ul class="plan-card__features">
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                4 postagens mensais
+              </li>
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                Conteúdos estáticos e carrosséis
+              </li>
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                Direcionamento básico de conteúdo
+              </li>
+            </ul>
+            <a href="https://wa.me/55519980334394?text=Olá! Tenho interesse no Plano Inicial de Gestão de Redes."
+              class="plan-card__cta plan-card__cta--outline" target="_blank" rel="noopener noreferrer">
+              Quero saber mais
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Plano Intermediário (Featured) -->
+          <div class="plan-card plan-card--featured reveal reveal-delay-1">
+            <span class="plan-card__badge plan-card__badge--popular">
+              <span class="plan-card__badge-dot" aria-hidden="true"></span>
+              Mais escolhido
+            </span>
+            <h4 class="plan-card__title">Intermediário</h4>
+            <p class="plan-card__subtitle">Para quem quer crescer com estratégia e posicionamento.</p>
+            <ul class="plan-card__features">
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                8 postagens mensais
+              </li>
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                Conteúdos estáticos e carrosséis
+              </li>
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                Planejamento estratégico
+              </li>
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                Direcionamento de posicionamento
+              </li>
+            </ul>
+            <a href="https://wa.me/55519980334394?text=Olá! Tenho interesse no Plano Intermediário de Gestão de Redes."
+              class="plan-card__cta plan-card__cta--filled" target="_blank" rel="noopener noreferrer">
+              Falar com especialista
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Plano Avançado -->
+          <div class="plan-card reveal reveal-delay-2">
+            <span class="plan-card__badge plan-card__badge--scale">
+              <span class="plan-card__badge-dot" aria-hidden="true"></span>
+              Para quem busca escala
+            </span>
+            <h4 class="plan-card__title">Avançado</h4>
+            <p class="plan-card__subtitle">Para quem quer dominar o digital com estratégia completa.</p>
+            <ul class="plan-card__features">
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                12 postagens mensais
+              </li>
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                Conteúdos estáticos e carrosséis
+              </li>
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                Estratégia completa de conteúdo
+              </li>
+              <li class="plan-card__feature">
+                <span class="plan-card__feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg></span>
+                Foco em posicionamento, crescimento e conversão
+              </li>
+            </ul>
+            <a href="https://wa.me/55519980334394?text=Olá! Tenho interesse no Plano Avançado de Gestão de Redes."
+              class="plan-card__cta plan-card__cta--outline" target="_blank" rel="noopener noreferrer">
+              Quero escalar meu negócio
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-divider" aria-hidden="true"></div>
+
+      <!-- ─────────────────────────────────────
+           2. CRIAÇÕES AVULSAS
+           ───────────────────────────────────── -->
+      <div class="svc-block reveal">
+        <div class="svc-block__header">
+          <div class="svc-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 19l7-7 3 3-7 7-3-3z" />
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+              <path d="M2 2l7.586 7.586" />
+              <circle cx="11" cy="11" r="2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="svc-block__name">Criações Avulsas</h3>
+            <p class="svc-block__desc">
+              Precisa de algo pontual? Criamos peças sob demanda, com a mesma qualidade e estratégia dos nossos planos.
+            </p>
+          </div>
+        </div>
+
+        <div class="svc-features svc-features--4col">
+          <div class="svc-feat reveal">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Artes individuais</h4>
+            <p class="svc-feat__text">Posts únicos com design profissional e alinhados à sua marca.</p>
+          </div>
+          <div class="svc-feat reveal reveal-delay-1">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Carrosséis personalizados</h4>
+            <p class="svc-feat__text">Conteúdo educativo e persuasivo em formato de carrossel.</p>
+          </div>
+          <div class="svc-feat reveal reveal-delay-2">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Materiais para campanhas</h4>
+            <p class="svc-feat__text">Peças visuais para ações especiais, datas comemorativas e promoções.</p>
+          </div>
+          <div class="svc-feat reveal reveal-delay-3">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Design sob demanda</h4>
+            <p class="svc-feat__text">Você pede, a gente cria. Flexibilidade total para necessidades pontuais.</p>
+          </div>
+        </div>
+
+        <div class="svc-block__cta-row reveal">
+          <a href="https://wa.me/55519980334394?text=Olá! Preciso de uma criação avulsa." class="btn-primary"
+            target="_blank" rel="noopener noreferrer">
+            Solicitar criação
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="svc-divider" aria-hidden="true"></div>
+
+      <!-- ─────────────────────────────────────
+           3. PRODUÇÃO E EDIÇÃO DE VÍDEOS
+           ───────────────────────────────────── -->
+      <div class="svc-block reveal">
+        <div class="svc-block__header">
+          <div class="svc-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7" />
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="svc-block__name">Produção e Edição de Vídeos</h3>
+            <p class="svc-block__desc">
+              Vídeos pensados para performance — não apenas estética. Do roteiro à entrega final, com foco em resultado.
+            </p>
+          </div>
+        </div>
+
+        <div class="svc-features svc-features--4col">
+          <div class="svc-feat reveal">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z" />
+                <path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+                <path
+                  d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z" />
+                <path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z" />
+                <path
+                  d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z" />
+                <path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z" />
+                <path
+                  d="M10 9.5C10 10.33 9.33 11 8.5 11h-5C2.67 11 2 10.33 2 9.5S2.67 8 3.5 8h5c.83 0 1.5.67 1.5 1.5z" />
+                <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Captação in loco</h4>
+            <p class="svc-feat__text">Gravamos no seu ambiente, captando a essência real do seu negócio.</p>
+          </div>
+          <div class="svc-feat reveal reveal-delay-1">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="10 8 16 12 10 16 10 8" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Direcionamento de gravação</h4>
+            <p class="svc-feat__text">Orientação completa de roteiro, enquadramento e postura.</p>
+          </div>
+          <div class="svc-feat reveal reveal-delay-2">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Edição profissional</h4>
+            <p class="svc-feat__text">Cortes dinâmicos, legendas, efeitos e trilhas que prendem atenção.</p>
+          </div>
+          <div class="svc-feat reveal reveal-delay-3">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                <polyline points="17 6 23 6 23 12" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Reels, anúncios e institucional</h4>
+            <p class="svc-feat__text">Formatos otimizados para cada plataforma e objetivo.</p>
+          </div>
+        </div>
+
+        <div class="svc-callout reveal">
+          <span class="svc-callout__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </span>
+          <span><strong>Performance, não vaidade.</strong> Cada vídeo é estratégico — pensado para gerar engajamento,
+            autoridade e conversão.</span>
+        </div>
+
+        <div class="svc-block__cta-row reveal">
+          <a href="https://wa.me/55519980334394?text=Olá! Tenho interesse em produção de vídeos." class="btn-primary"
+            target="_blank" rel="noopener noreferrer">
+            Quero produzir conteúdo em vídeo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="svc-divider" aria-hidden="true"></div>
+
+      <!-- ─────────────────────────────────────
+           4. CRIAÇÃO DE LANDING PAGES
+           ───────────────────────────────────── -->
+      <div class="svc-block reveal">
+        <div class="svc-block__header">
+          <div class="svc-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="svc-block__name">Criação de Landing Pages</h3>
+            <p class="svc-block__desc">
+              Páginas que convertem visitantes em clientes. Estrutura estratégica, copy persuasiva e design que gera
+              resultado.
+            </p>
+          </div>
+        </div>
+
+        <div class="svc-features svc-features--4col">
+          <div class="svc-feat reveal">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                <line x1="12" y1="22.08" x2="12" y2="12" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Estrutura estratégica</h4>
+            <p class="svc-feat__text">Hierarquia de informação pensada para guiar o visitante até a ação.</p>
+          </div>
+          <div class="svc-feat reveal reveal-delay-1">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Copy voltada para conversão</h4>
+            <p class="svc-feat__text">Textos persuasivos que quebram objeções e geram ação imediata.</p>
+          </div>
+          <div class="svc-feat reveal reveal-delay-2">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                <path d="M2 2l7.586 7.586" />
+                <circle cx="11" cy="11" r="2" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Design alinhado à marca</h4>
+            <p class="svc-feat__text">Visual profissional e coerente com a identidade do seu negócio.</p>
+          </div>
+          <div class="svc-feat reveal reveal-delay-3">
+            <div class="svc-feat__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h4 class="svc-feat__title">Foco em geração de leads</h4>
+            <p class="svc-feat__text">Formulários, CTAs e fluxos otimizados para captar contatos qualificados.</p>
+          </div>
+        </div>
+
+        <div class="svc-block__cta-row reveal">
+          <a href="https://wa.me/55519980334394?text=Olá! Preciso de uma landing page." class="btn-primary"
+            target="_blank" rel="noopener noreferrer">
+            Quero minha landing page
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       3. PROVA REAL — PORTFÓLIO
+       ======================================== -->
+  <section class="section portfolio" id="portfolio">
+    <div class="container">
+      <span class="section-label reveal">Portfólio</span>
+      <h2 class="section-title reveal">
+        Resultados que<br>
+        <span class="gradient-text">falam por si.</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        Cada projeto é um caso real de transformação — do planejamento à execução, com impacto mensurável.
+      </p>
+
+      <div class="portfolio__grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-card__image">
+            <div class="project-card__image-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Branding + Social</span>
+            <h3 class="project-card__name">Nome do Cliente 01</h3>
+            <p class="project-card__desc">
+              Breve contexto do projeto realizado e o desafio inicial do cliente.
+            </p>
+            <div class="project-card__result">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                <polyline points="17 6 23 6 23 12" />
+              </svg>
+              Resultado alcançado — ex: +300% engajamento
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card__image">
+            <div class="project-card__image-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Estratégia Digital</span>
+            <h3 class="project-card__name">Nome do Cliente 02</h3>
+            <p class="project-card__desc">
+              Breve contexto do projeto realizado e o desafio inicial do cliente.
+            </p>
+            <div class="project-card__result">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                <polyline points="17 6 23 6 23 12" />
+              </svg>
+              Resultado alcançado — ex: +150% novos seguidores
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-card__image">
+            <div class="project-card__image-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <span class="project-card__tag">Gestão de Tráfego</span>
+            <h3 class="project-card__name">Nome do Cliente 03</h3>
+            <p class="project-card__desc">
+              Breve contexto do projeto realizado e o desafio inicial do cliente.
+            </p>
+            <div class="project-card__result">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                <polyline points="17 6 23 6 23 12" />
+              </svg>
+              Resultado alcançado — ex: R$ 50k em faturamento
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       4. VÍDEOS / PROVA SOCIAL
+       ======================================== -->
+  <section class="section videos" id="videos">
+    <div class="container">
+      <span class="section-label reveal">Prova Social</span>
+      <h2 class="section-title reveal">
+        Veja na prática.<br>
+        <span class="gradient-text">Sem filtro, sem promessa vazia.</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        Resultados, bastidores e depoimentos reais de quem já passou pela transformação R2A.
+      </p>
+
+      <div class="videos__grid">
+        <!-- Video 1 (Instagram) -->
+        <div class="video-card reveal">
+          <div class="video-card__embed video-card__embed--reel">
+            <iframe src="https://www.instagram.com/reel/DRagokvjm9x/embed/" frameborder="0" scrolling="no"
+              allowtransparency="true" allowfullscreen="true" loading="lazy"
+              title="Reel Instagram - Reinauguração Estúdio Vitaliza"></iframe>
+          </div>
+          <div class="video-card__info">
+            <p class="video-card__title">Reinauguração Estúdio Vitaliza</p>
+            <p class="video-card__type">Resultado de cliente</p>
+          </div>
+        </div>
+
+        <!-- Video 2 (Instagram) -->
+        <div class="video-card reveal reveal-delay-1">
+          <div class="video-card__embed video-card__embed--reel">
+            <iframe src="https://www.instagram.com/reel/DU4Oo-9DtMI/embed/" frameborder="0" scrolling="no"
+              allowtransparency="true" allowfullscreen="true" loading="lazy"
+              title="Reel Instagram - Dia a dia Estúdio Vitaliza"></iframe>
+          </div>
+          <div class="video-card__info">
+            <p class="video-card__title">Dia a dia Estúdio Vitaliza</p>
+            <p class="video-card__type">Bastidores</p>
+          </div>
+        </div>
+
+        <!-- Video 3 (Local MP4) -->
+        <div class="video-card reveal reveal-delay-2">
+          <div class="video-card__embed video-card__embed--reel">
+            <video src="WhatsApp Video 2026-04-21 at 12.46.56.mp4" class="local-video" playsinline preload="metadata"
+              title="Sede da FuelTech" aria-label="Vídeo apresentando a Sede da FuelTech"></video>
+          </div>
+          <div class="video-card__info">
+            <p class="video-card__title">Alta Performance e Super Carros</p>
+            <p class="video-card__type">Sede da FuelTech</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       5. DIFERENCIAL R2A
+       ======================================== -->
+  <section class="section differentials" id="diferencial">
+    <div class="container">
+      <span class="section-label reveal">Por que a R2A</span>
+      <h2 class="section-title reveal">
+        Não é mais do mesmo.<br>
+        <span class="gradient-text">É execução com direção.</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        Enquanto outros entregam posts bonitos, nós entregamos estratégia
+        que move o ponteiro do seu negócio.
+      </p>
+
+      <div class="diff__grid">
+        <!-- Diff 1 -->
+        <div class="diff-block reveal">
+          <div class="diff-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="diff-block__title">Execução, não teoria</h3>
+            <p class="diff-block__text">
+              Cada ação tem um propósito claro. Sem enrolação, sem relatórios que ninguém lê — apenas resultados.
+            </p>
+          </div>
+        </div>
+
+        <!-- Diff 2 -->
+        <div class="diff-block reveal reveal-delay-1">
+          <div class="diff-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="diff-block__title">Transparência total</h3>
+            <p class="diff-block__text">
+              Você acompanha cada etapa, entende cada decisão e vê exatamente para onde seu investimento está indo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Diff 3 -->
+        <div class="diff-block reveal reveal-delay-2">
+          <div class="diff-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="diff-block__title">Velocidade com precisão</h3>
+            <p class="diff-block__text">
+              Agilidade sem perder qualidade. Resposta rápida, entregas no prazo e ajustes em tempo real.
+            </p>
+          </div>
+        </div>
+
+        <!-- Diff 4 -->
+        <div class="diff-block reveal reveal-delay-3">
+          <div class="diff-block__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+              <polyline points="17 6 23 6 23 12" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="diff-block__title">Orientado por dados</h3>
+            <p class="diff-block__text">
+              Decisões baseadas em métricas reais, não em achismos. Otimização constante para maximizar ROI.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       6. QUEBRA DE OBJEÇÃO
+       ======================================== -->
+  <section class="section objection" id="objecoes">
+    <div class="container container--narrow">
+      <span class="section-label reveal" style="justify-content: center;">Funciona para você</span>
+      <h2 class="section-title reveal">
+        A R2A é para você,<br>
+        <span class="gradient-text">mesmo que...</span>
+      </h2>
+
+      <ul class="objection__list">
+        <li class="objection__item reveal">
+          <span class="objection__check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </span>
+          Você não saiba por onde começar no digital
+        </li>
+        <li class="objection__item reveal reveal-delay-1">
+          <span class="objection__check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </span>
+          Já tenha tentado antes e não teve resultado
+        </li>
+        <li class="objection__item reveal reveal-delay-2">
+          <span class="objection__check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </span>
+          Ache que seu segmento é "diferente demais"
+        </li>
+        <li class="objection__item reveal reveal-delay-3">
+          <span class="objection__check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </span>
+          Não tenha tempo para se dedicar ao marketing
+        </li>
+        <li class="objection__item reveal reveal-delay-4">
+          <span class="objection__check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </span>
+          Tenha medo de investir errado
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       8. SEÇÃO FINAL — CONVERSÃO
+       ======================================== -->
+  <section class="section final-cta" id="contato">
+    <div class="container container--narrow">
+      <div class="final-cta__glow reveal" aria-hidden="true"></div>
+
+      <span class="section-label reveal" style="justify-content: center;">Bora crescer</span>
+      <h2 class="final-cta__headline reveal">
+        Pronto pra sair do<br>
+        <span class="gradient-text">plano pro resultado?</span>
+      </h2>
+      <p class="final-cta__sub reveal">
+        Fale agora com a equipe R2A e descubra como podemos transformar
+        a presença digital do seu negócio em crescimento real.
+      </p>
+
+      <div class="final-cta__actions reveal">
+        <a href="https://wa.me/55519980334394?text=Olá! Vim pelo site e quero saber mais sobre a R2A."
+          class="btn-whatsapp" target="_blank" rel="noopener noreferrer" id="final-cta-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Chamar no WhatsApp
+        </a>
+        <a href="https://calendar.app.google/aP6macLaFCfGn2me7" class="btn-secondary" id="final-cta-schedule">
+          Agendar reunião
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       9. FOOTER
+       ======================================== -->
+  <footer class="footer" id="rodape">
+    <div class="container">
+      <p class="footer__brand"><span class="gradient-text">R2A</span></p>
+      <p class="footer__tagline">Ready to Action — Estratégia · Execução · Resultado</p>
+
+      <nav class="footer__socials" aria-label="Redes sociais">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/55519980334394" class="footer__social-link" aria-label="WhatsApp" target="_blank"
+          rel="noopener noreferrer" id="footer-whatsapp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/raissaaos/" class="footer__social-link" aria-label="Instagram"
+          target="_blank" rel="noopener noreferrer" id="footer-instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg>
+        </a>
+      </nav>
+
+      <p class="footer__copy">&copy; 2026 R2A — Ready to Action. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ========================================
+       JAVASCRIPT
+       ======================================== -->
+  <script>
+    // ── Preloader Logic ──
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+          preloader.classList.add('fade-out');
+          setTimeout(() => preloader.remove(), 500);
+        }
+      }, 700); // 700ms gives time for video poster frames and layout stabilization
+    });
+    // ── Navbar scroll effect ──
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      navbar.classList.toggle('nav--scrolled', currentScroll > 40);
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    // ── Scroll Reveal (IntersectionObserver) ──
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal--visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    document.querySelectorAll('.reveal').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // ── Ripple Effect on buttons ──
+    document.querySelectorAll('.btn-primary, .btn-whatsapp').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple-effect');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        this.appendChild(ripple);
+        ripple.addEventListener('animationend', () => ripple.remove());
+      });
+    });
+
+    // ── Smooth scroll for anchor links ──
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ── Prefetch external links on hover ──
+    document.querySelectorAll('a[href^="http"]').forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        const prefetch = document.createElement('link');
+        prefetch.rel = 'prefetch';
+        prefetch.href = link.href;
+        document.head.appendChild(prefetch);
+      }, { once: true });
+    });
+    // ── Local Video Playback Logic ──
+    const localVideos = document.querySelectorAll('.local-video');
+
+    localVideos.forEach(video => {
+      video.volume = 0.15;
+      video.addEventListener('mouseenter', () => video.play().catch(e => { }));
+      video.addEventListener('mouseleave', () => video.pause());
+      video.addEventListener('ended', (e) => {
+        const videosArray = Array.from(localVideos);
+        const currentIndex = videosArray.indexOf(e.target);
+        if (currentIndex < videosArray.length - 1) {
+          videosArray[currentIndex + 1].play().catch(e => { });
+        }
+      });
+    });
+
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.play().catch(e => { });
+        else entry.target.pause();
+      });
+    }, { threshold: 0.6 });
+
+    localVideos.forEach(v => videoObserver.observe(v));
+
+    // ── Pre-Booking Modal Logic ──
+    document.addEventListener('DOMContentLoaded', () => {
+      const scheduleBtn = document.getElementById('final-cta-schedule');
+      if (!scheduleBtn) return;
+
+      const modalUrl = scheduleBtn.href; // Captura a URL real do calendário
+      const modalOverlay = document.getElementById('preBookingModal');
+      const modalForm = document.getElementById('preBookingForm');
+      const modalSubmitBtn = document.getElementById('btn-submit-modal');
+
+      // Abre o Modal
+      scheduleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (modalOverlay) modalOverlay.classList.add('is-open');
+      });
+
+      // Fecha o Modal (via X)
+      window.closePreBooking = function () {
+        if (modalOverlay) modalOverlay.classList.remove('is-open');
+      }
+
+      // Fecha o modal clicando fora
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+          if (e.target === modalOverlay) window.closePreBooking();
+        });
+      }
+
+      // Submissão do Formulário
+      if (modalForm) {
+        modalForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const formData = new FormData(modalForm);
+          const data = Object.fromEntries(formData.entries());
+          data.services = formData.getAll('services'); // Array para checkboxes
+
+          // Feedback visual
+          const originalText = modalSubmitBtn.innerHTML;
+          modalSubmitBtn.innerHTML = 'Enviando...';
+          modalSubmitBtn.classList.add('btn-loading');
+
+          // 📩 ENVIO DE E-MAIL VIA FORMSUBMIT 📩
+          const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/r2amarketing0@gmail.com';
+
+          // Adicionando um subject customizado para o email
+          data._subject = "Novo Lead Agendado - R2A Marketing!";
+
+          try {
+            await fetch(FORMSUBMIT_URL, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
+          } catch (error) {
+            console.error('Erro ao enviar lead para o e-mail:', error);
+          } finally {
+            // Sucesso ou falha, SEMPRE levamos pro Google Calendar
+            modalSubmitBtn.innerHTML = originalText;
+            modalSubmitBtn.classList.remove('btn-loading');
+            window.open(modalUrl, '_blank');
+            window.closePreBooking();
+            modalForm.reset();
+          }
+        });
+      }
+    });
+
+  </script>
+
+  <!-- Pre-Booking Overlay Modal HTML -->
+  <div class="pre-booking-overlay" id="preBookingModal" aria-hidden="true">
+    <div class="pre-booking-modal">
+      <button class="pre-booking-close" aria-label="Fechar" onclick="closePreBooking()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div class="pre-booking-header">
+        <h3>Vamos preparar uma estratégia personalizada pra você 🚀</h3>
+        <p>Leva menos de 30 segundos e nos ajuda a tornar sua reunião muito mais objetiva.</p>
+      </div>
+
+      <form id="preBookingForm" class="pre-booking-form">
+        <div class="form-group">
+          <label for="lead_company">Qual o nome do seu negócio? *</label>
+          <input type="text" id="lead_company" name="company" placeholder="Ex: Estúdio Vitaliza" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lead_instagram">Qual é o @ do seu Instagram ou principal canal? *</label>
+          <input type="text" id="lead_instagram" name="instagram" placeholder="Ex: @r2amarketing" required>
+        </div>
+
+        <div class="form-group">
+          <label>Quais soluções você tem interesse hoje?</label>
+          <div class="options-grid">
+            <div><input type="checkbox" id="svc1" name="services" value="Gestão de redes sociais" class="sr-only"><label
+                for="svc1" class="option-card">Gestão de redes sociais</label></div>
+            <div><input type="checkbox" id="svc2" name="services" value="Criações avulsas" class="sr-only"><label
+                for="svc2" class="option-card">Criações avulsas</label></div>
+            <div><input type="checkbox" id="svc3" name="services" value="Produção e edição de vídeos"
+                class="sr-only"><label for="svc3" class="option-card">Produção/edição</label></div>
+            <div><input type="checkbox" id="svc4" name="services" value="Criação de Landing Page" class="sr-only"><label
+                for="svc4" class="option-card">Landing Page</label></div>
+            <div><input type="checkbox" id="svc5" name="services" value="Tráfego pago" class="sr-only"><label for="svc5"
+                class="option-card">Tráfego pago</label></div>
+            <div><input type="checkbox" id="svc6" name="services" value="Ainda não sei, preciso de orientação"
+                class="sr-only"><label for="svc6" class="option-card">Ainda não sei...</label></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Qual é o seu principal objetivo hoje? *</label>
+          <div class="options-grid">
+            <div><input type="radio" id="obj1" name="objective" value="Atrair mais clientes" class="sr-only"
+                required><label for="obj1" class="option-card">Atrair mais clientes</label></div>
+            <div><input type="radio" id="obj2" name="objective" value="Aumentar vendas" class="sr-only"><label
+                for="obj2" class="option-card">Aumentar vendas</label></div>
+            <div><input type="radio" id="obj3" name="objective" value="Crescer nas redes sociais" class="sr-only"><label
+                for="obj3" class="option-card">Crescer nas redes sociais</label></div>
+            <div><input type="radio" id="obj4" name="objective" value="Melhorar o posicionamento" class="sr-only"><label
+                for="obj4" class="option-card">Melhorar posicionamento</label></div>
+            <div><input type="radio" id="obj5" name="objective" value="Profissionalizar meu perfil"
+                class="sr-only"><label for="obj5" class="option-card">Profissionalizar perfil</label></div>
+            <div><input type="radio" id="obj6" name="objective" value="Outro" class="sr-only"><label for="obj6"
+                class="option-card">Outro</label></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Em qual momento seu negócio está? *</label>
+          <div class="options-grid">
+            <div><input type="radio" id="stg1" name="stage" value="Estou começando agora" class="sr-only"
+                required><label for="stg1" class="option-card">Começando agora</label></div>
+            <div><input type="radio" id="stg2" name="stage" value="Já tenho clientes, mas quero crescer"
+                class="sr-only"><label for="stg2" class="option-card">Tenho clientes, quero crescer</label></div>
+            <div><input type="radio" id="stg3" name="stage" value="Já vendo, mas quero escalar" class="sr-only"><label
+                for="stg3" class="option-card">Já vendo, quero escalar</label></div>
+            <div><input type="radio" id="stg4" name="stage" value="Meu marketing não está trazendo resultado"
+                class="sr-only"><label for="stg4" class="option-card">Marketing sem resultado</label></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Você já investe em marketing hoje?</label>
+          <div class="options-grid">
+            <div><input type="radio" id="bg1" name="budget" value="Não invisto ainda" class="sr-only"><label for="bg1"
+                class="option-card">Não invisto</label></div>
+            <div><input type="radio" id="bg2" name="budget" value="Até R$500/mês" class="sr-only"><label for="bg2"
+                class="option-card">Até R$500/mês</label></div>
+            <div><input type="radio" id="bg3" name="budget" value="Investimento moderado" class="sr-only"><label
+                for="bg3" class="option-card">Investimento moderado</label></div>
+            <div><input type="radio" id="bg4" name="budget" value="Investimento estruturado" class="sr-only"><label
+                for="bg4" class="option-card">Investimento estruturado</label></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Quando você pretende começar? *</label>
+          <div class="options-grid">
+            <div><input type="radio" id="urg1" name="urgency" value="O quanto antes" class="sr-only" required><label
+                for="urg1" class="option-card">O quanto antes</label></div>
+            <div><input type="radio" id="urg2" name="urgency" value="Nas próximas semanas" class="sr-only"><label
+                for="urg2" class="option-card">Nas próximas semanas</label></div>
+            <div><input type="radio" id="urg3" name="urgency" value="Estou avaliando ainda" class="sr-only"><label
+                for="urg3" class="option-card">Estou avaliando ainda</label></div>
+          </div>
+        </div>
+
+        <div class="form-footer">
+          <button type="submit" class="btn-primary" id="btn-submit-modal" style="width: 100%; justify-content: center;">
+            Ver horários disponíveis
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+          <p class="security-note">🔒 Seus dados estão seguros e não serão compartilhados.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/55519980334394?text=Olá! Vim pelo site e quero saber mais sobre a R2A." class="float-wa"
+    target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+</body>
+
+</html>
